@@ -84,11 +84,11 @@ const AlertPanel = ({ alerts }) => {
                   <div className="alert-message">{alert.message}</div>
                   <div className="alert-meta">
                     <span>{alert.timestamp}</span>
-                    <span>â€¢</span>
+                    <span>·</span>
                     <span>{alert.ip}</span>
                     {alert.country && alert.country !== 'Unknown' && (
                       <>
-                        <span>â€¢</span>
+                        <span>·</span>
                         <span>{alert.country}</span>
                       </>
                     )}
