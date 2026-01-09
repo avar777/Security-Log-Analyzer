@@ -22,10 +22,38 @@ const AlertPanel = ({ alerts }) => {
     }
   };
 
+  // Sort alerts by severity first, then by time (most recent first)
+  const sortAlerts = (alertsToSort) => {
+    const severityOrder = { 
+      critical: 0, 
+      high: 1, 
+      medium: 2, 
+      low: 3,
+      failed: 3,
+      success: 4 
+    };
+
+    return [...alertsToSort].sort((a, b) => {
+      const severityA = severityOrder[a.severity?.toLowerCase()] ?? 5;
+      const severityB = severityOrder[b.severity?.toLowerCase()] ?? 5;
+      
+      if (severityA !== severityB) {
+        return severityA - severityB;
+      }
+      
+      // If same severity, sort by time (most recent first)
+      const timeA = new Date(a.timestamp).getTime();
+      const timeB = new Date(b.timestamp).getTime();
+      return timeB - timeA;
+    });
+  };
+
   // The panel won't show if there are no alerts
   if (!alerts || alerts.length === 0) {
     return null;
   }
+
+  const sortedAlerts = sortAlerts(alerts);
 
   return (
     <div className="alert-panel-container">
@@ -40,7 +68,7 @@ const AlertPanel = ({ alerts }) => {
       {/* Shows all alerts and is scrollable */}
       <div className="alert-panel-scroll">
         <div className="alert-panel-grid">
-          {alerts.map((alert, idx) => (
+          {sortedAlerts.map((alert, idx) => (
             <div 
               key={idx} 
               className="alert-item"
@@ -56,11 +84,11 @@ const AlertPanel = ({ alerts }) => {
                   <div className="alert-message">{alert.message}</div>
                   <div className="alert-meta">
                     <span>{alert.timestamp}</span>
-                    <span>•</span>
+                    <span>â€¢</span>
                     <span>{alert.ip}</span>
                     {alert.country && alert.country !== 'Unknown' && (
                       <>
-                        <span>•</span>
+                        <span>â€¢</span>
                         <span>{alert.country}</span>
                       </>
                     )}

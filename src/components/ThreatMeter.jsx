@@ -11,14 +11,14 @@ import { TrendingUp } from 'lucide-react';
 const ThreatMeter = ({ threatLevel }) => {
   // Figure out what color the bar will be
   const getThreatColor = () => {
-    if (threatLevel < 30) return '#7a9b7f'; // green - all good
+    if (threatLevel < 40) return '#7a9b7f'; // green - all good
     if (threatLevel < 60) return '#e8b55d'; // yellow - keep an eye out
     if (threatLevel < 80) return '#e89a5d'; // orange - not great
     return '#d98572'; // red - bad
   };
 
   const getThreatLabel = () => {
-    if (threatLevel < 30) return 'Low';
+    if (threatLevel < 40) return 'Low';
     if (threatLevel < 60) return 'Elevated';
     if (threatLevel < 80) return 'High';
     return 'Critical';

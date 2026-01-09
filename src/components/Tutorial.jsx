@@ -37,8 +37,8 @@ const HelpTutorial = () => {
             <div className="tutorial-content">
               <h2>Help Guide</h2>
               <p className="tutorial-intro">
-                This website allows the user to upload a txt or log file. Once the files are uploaded it will analyze
-                the security logs and identifies threats like hacking attempts, 
+                This website allows users to upload a txt or log file. Once uploaded, it will analyze
+                the security logs and identify threats like hacking attempts, 
                 brute force attacks, and suspicious activity.
               </p>
 
@@ -51,8 +51,9 @@ const HelpTutorial = () => {
                 <p><strong>Threat Level:</strong></p>
                 <ul>
                   <li><span className="status-low">Low (0-40%):</span> This is normal activity</li>
-                  <li><span className="status-high">High (40-70%):</span> There are multiple threats detected</li>
-                  <li><span className="status-critical">Critical (70-100%):</span> Immediate attention is needed</li>
+                  <li><span className="status-elevated">Elevated (40-60%):</span> Some suspicious activity detected</li>
+                  <li><span className="status-high">High (60-80%):</span> There are multiple threats detected</li>
+                  <li><span className="status-critical">Critical (80-100%):</span> Immediate attention is needed</li>
                 </ul>
 
                 <p><strong>Quick Statistics:</strong></p>
@@ -64,26 +65,25 @@ const HelpTutorial = () => {
 
                 <p><strong>Security Alerts:</strong></p>
                 <ul>
-                  <li><span className="severity-critical">CRITICAL</span> - Serious attacks (SQL injection, malware)</li>
-                  <li><span className="severity-high">HIGH</span> - Major concerns (port scans, XSS attempts)</li>
+                  <li><span className="severity-success">NORMAL</span> - Normal, authorized activity</li>
+                  <li><span className="severity-failed">LOW</span> - Failed login attempts (possible brute force)</li>
                   <li><span className="severity-medium">MEDIUM</span> - Suspicious but not urgent</li>
-                  <li><span className="severity-failed">FAILED</span> - Failed login attempts (possible brute force)</li>
-                  <li><span className="severity-success">SUCCESS</span> - Normal, authorized activity</li>
+                  <li><span className="severity-high">HIGH</span> - Major concerns (port scans, XSS attempts)</li>
+                  <li><span className="severity-critical">CRITICAL</span> - Serious attacks (SQL injection, malware)</li>
                 </ul>
               </div>
 
               {/* What to look for */}
               <div className="tutorial-section">
                 <div className="tutorial-section-header">
-                  <Shield size={20} />
                   <h3>What to Look For</h3>
                 </div>
-                <p>Pay attention to these red flags:</p>
+                <p><strong>Red flags:</strong></p>
                 <ul>
                   <li>Threat level above 60%</li>
                   <li>Multiple failed logins from the same IP address</li>
                   <li>Critical or High severity alerts</li>
-                  <li>Lots of requests from unfamiliar countries</li>
+                  <li>Many requests from unfamiliar countries</li>
                 </ul>
 
                 <p><strong>Common Attack Types:</strong></p>
