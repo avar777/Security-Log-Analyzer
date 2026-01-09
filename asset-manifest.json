@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Security-Log-Analyzer/static/css/main.9fa9c69f.css",
+    "main.js": "/Security-Log-Analyzer/static/js/main.95d4e808.js",
+    "static/js/453.fa2ba882.chunk.js": "/Security-Log-Analyzer/static/js/453.fa2ba882.chunk.js",
+    "index.html": "/Security-Log-Analyzer/index.html",
+    "main.9fa9c69f.css.map": "/Security-Log-Analyzer/static/css/main.9fa9c69f.css.map",
+    "main.95d4e808.js.map": "/Security-Log-Analyzer/static/js/main.95d4e808.js.map",
+    "453.fa2ba882.chunk.js.map": "/Security-Log-Analyzer/static/js/453.fa2ba882.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9fa9c69f.css",
+    "static/js/main.95d4e808.js"
+  ]
+}
