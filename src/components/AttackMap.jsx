@@ -116,16 +116,9 @@ const AttackMap = ({ attackData }) => {
               }}
             >
               <strong>{hoveredLocation.country}</strong>
-              <div>{hoveredLocation.attacks} threat{hoveredLocation.attacks !== 1 ? 's' : ''}</div>
+              <div>{hoveredLocation.attacks} Threat{hoveredLocation.attacks !== 1 ? 's' : ''}</div>
             </div>
           )}
-        </div>
-      </div>
-
-      {/* Legend */}
-      <div className="map-legend">
-        <div className="legend-note">
-          Larger and more intense red circles indicate higher attack volume from that region
         </div>
       </div>
     </div>
