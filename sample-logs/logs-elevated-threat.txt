@@ -1,0 +1,50 @@
+2026-01-07 14:00:12 [SUCCESS] Login from 10.0.0.45 (US) - user: jsmith
+2026-01-07 14:02:33 [FAILED] Login attempt from 45.142.120.10 (Russia) - user: admin
+2026-01-07 14:05:18 [MEDIUM] Suspicious user-agent detected from 91.108.56.181 (Germany)
+2026-01-07 14:08:45 [SUCCESS] Login from 10.0.0.67 (US) - user: mjones
+2026-01-07 14:12:22 [HIGH] Port scan detected from 203.0.113.42 (Unknown) - scanning ports 22, 80, 443
+2026-01-07 14:15:09 [FAILED] Login attempt from 198.51.100.88 (China) - user: root
+2026-01-07 14:18:33 [MEDIUM] Rate limit exceeded from 185.220.101.33 (Netherlands)
+2026-01-07 14:22:44 [SUCCESS] Login from 10.0.0.52 (US) - user: agarcia
+2026-01-07 14:25:11 [FAILED] Login attempt from 45.142.120.10 (Russia) - user: root
+2026-01-07 14:28:55 [MEDIUM] Unusual outbound connection to 203.0.113.42 on port 4444
+2026-01-07 14:32:18 [HIGH] Multiple failed authentication attempts from 91.108.56.181 (Germany)
+2026-01-07 14:35:42 [SUCCESS] Login from 10.0.0.78 (US) - user: dwilson
+2026-01-07 14:38:29 [FAILED] Login attempt from 185.220.101.33 (Netherlands) - user: admin
+2026-01-07 14:42:05 [MEDIUM] Suspicious file upload detected from 203.0.113.42
+2026-01-07 14:45:33 [INFO] Firewall rule updated - blocking suspicious IPs
+2026-01-07 14:48:17 [HIGH] XSS attempt blocked from 198.51.100.88 (China) in search parameter
+2026-01-07 14:52:41 [FAILED] Login attempt from 45.142.120.10 (Russia) - user: administrator
+2026-01-07 14:55:22 [SUCCESS] Login from 10.0.0.91 (US) - user: rthompson
+2026-01-07 14:58:09 [MEDIUM] Unusual login time detected for user: admin
+2026-01-07 15:02:33 [FAILED] Login attempt from 91.108.56.181 (Germany) - user: postgres
+2026-01-07 15:05:47 [HIGH] SQL injection attempt blocked from 185.220.101.33 (Netherlands) in /api/users
+2026-01-07 15:08:15 [MEDIUM] Suspicious DNS query from 203.0.113.42
+2026-01-07 15:12:28 [SUCCESS] Login from 10.0.0.103 (US) - user: klee
+2026-01-07 15:15:55 [FAILED] Login attempt from 198.51.100.88 (China) - user: mysql
+2026-01-07 15:18:42 [HIGH] Unauthorized API access attempt from 45.142.120.10 (Russia)
+2026-01-07 15:22:11 [MEDIUM] Multiple requests from same IP 91.108.56.181 (Germany)
+2026-01-07 15:25:33 [INFO] Security scan completed
+2026-01-07 15:28:09 [FAILED] Login attempt from 185.220.101.33 (Netherlands) - user: oracle
+2026-01-07 15:32:44 [SUCCESS] Login from 10.0.0.115 (US) - user: pbrown
+2026-01-07 15:35:27 [HIGH] Brute force attempt on FTP from 198.51.100.88 (China)
+2026-01-07 15:38:15 [MEDIUM] Unusual network traffic pattern from 203.0.113.42
+2026-01-07 15:42:58 [FAILED] Login attempt from 45.142.120.10 (Russia) - user: sysadmin
+2026-01-07 15:45:33 [SUCCESS] Login from 10.0.0.127 (US) - user: zmartin
+2026-01-07 15:48:11 [HIGH] Directory traversal attempt from 91.108.56.181 (Germany) - blocked
+2026-01-07 15:52:29 [MEDIUM] Rate limit warning from 185.220.101.33 (Netherlands)
+2026-01-07 15:55:48 [FAILED] Login attempt from 198.51.100.88 (China) - user: test
+2026-01-07 15:58:35 [INFO] System update applied
+2026-01-07 16:02:14 [HIGH] Path traversal attempt from 203.0.113.42 - blocked
+2026-01-07 16:05:53 [MEDIUM] Suspicious user-agent from 45.142.120.10 (Russia)
+2026-01-07 16:08:29 [SUCCESS] Login from 10.0.0.138 (US) - user: tclark
+2026-01-07 16:12:07 [FAILED] Login attempt from 91.108.56.181 (Germany) - user: admin
+2026-01-07 16:15:42 [HIGH] Multiple failed login attempts from 185.220.101.33 (Netherlands)
+2026-01-07 16:18:19 [MEDIUM] Unusual access pattern detected from 198.51.100.88 (China)
+2026-01-07 16:22:55 [SUCCESS] Login from 10.0.0.149 (US) - user: nwhite
+2026-01-07 16:25:31 [FAILED] Login attempt from 203.0.113.42 - user: root
+2026-01-07 16:28:08 [HIGH] Cross-site scripting attempt from 45.142.120.10 (Russia)
+2026-01-07 16:32:44 [MEDIUM] Excessive requests from 91.108.56.181 (Germany)
+2026-01-07 16:35:21 [INFO] Backup completed successfully
+2026-01-07 16:38:58 [FAILED] Login attempt from 185.220.101.33 (Netherlands) - user: guest
+2026-01-07 16:42:35 [SUCCESS] Login from 10.0.0.156 (US) - user: dlewis

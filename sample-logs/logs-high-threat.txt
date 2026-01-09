@@ -1,0 +1,50 @@
+2026-01-07 14:00:12 [HIGH] Port scan detected from 45.142.120.10 (Russia) - scanning ports 22, 80, 443, 3306
+2026-01-07 14:02:33 [CRITICAL] SQL injection attempt detected from 185.220.101.33 (Netherlands) in /api/users
+2026-01-07 14:05:18 [FAILED] Login attempt from 198.51.100.88 (China) - user: admin
+2026-01-07 14:08:45 [HIGH] Multiple failed authentication attempts from 91.108.56.181 (Germany)
+2026-01-07 14:12:22 [CRITICAL] Malware signature detected in uploaded file from 45.142.120.10 (Russia)
+2026-01-07 14:15:09 [HIGH] XSS attempt blocked from 203.0.113.42 in search parameter
+2026-01-07 14:18:33 [FAILED] Login attempt from 185.220.101.33 (Netherlands) - user: root
+2026-01-07 14:22:44 [CRITICAL] Directory traversal attempt from 198.51.100.88 (China) - blocked
+2026-01-07 14:25:11 [HIGH] Excessive requests detected from 91.108.56.181 (Germany) - possible DDoS
+2026-01-07 14:28:55 [SUCCESS] Login from 10.0.0.45 (US) - user: jsmith
+2026-01-07 14:32:18 [CRITICAL] Multiple SSH brute force attempts from 45.142.120.10 (Russia) - 18 failed attempts in 30s
+2026-01-07 14:35:42 [HIGH] Unauthorized API access from 185.220.101.33 (Netherlands)
+2026-01-07 14:38:29 [FAILED] Login attempt from 203.0.113.42 - user: administrator
+2026-01-07 14:42:05 [CRITICAL] Command injection detected from 198.51.100.88 (China) in /admin/exec
+2026-01-07 14:45:33 [HIGH] Brute force attack on FTP from 91.108.56.181 (Germany)
+2026-01-07 14:48:17 [FAILED] Login attempt from 45.142.120.10 (Russia) - user: postgres
+2026-01-07 14:52:41 [CRITICAL] Buffer overflow attempt detected from 185.220.101.33 (Netherlands)
+2026-01-07 14:55:22 [HIGH] SQL injection blocked from 203.0.113.42 in /search
+2026-01-07 14:58:09 [MEDIUM] Suspicious user-agent from 198.51.100.88 (China)
+2026-01-07 15:02:33 [CRITICAL] Ransomware-like behavior detected from 91.108.56.181 (Germany)
+2026-01-07 15:05:47 [HIGH] Path traversal attempt from 45.142.120.10 (Russia) - blocked
+2026-01-07 15:08:15 [FAILED] Login attempt from 185.220.101.33 (Netherlands) - user: oracle
+2026-01-07 15:12:28 [CRITICAL] Zero-day exploit attempt from 198.51.100.88 (China)
+2026-01-07 15:15:55 [HIGH] Multiple failed login attempts from 203.0.113.42
+2026-01-07 15:18:42 [SUCCESS] Login from 10.0.0.67 (US) - user: mjones
+2026-01-07 15:22:11 [CRITICAL] Cryptocurrency mining script detected from 91.108.56.181 (Germany)
+2026-01-07 15:25:33 [HIGH] Remote code execution attempt blocked from 45.142.120.10 (Russia)
+2026-01-07 15:28:09 [FAILED] Login attempt from 185.220.101.33 (Netherlands) - user: mysql
+2026-01-07 15:32:44 [CRITICAL] Data exfiltration attempt from 198.51.100.88 (China)
+2026-01-07 15:35:27 [HIGH] Privilege escalation attempt detected from 203.0.113.42
+2026-01-07 15:38:15 [FAILED] Login attempt from 91.108.56.181 (Germany) - user: sysadmin
+2026-01-07 15:42:58 [CRITICAL] SQL injection with union select from 45.142.120.10 (Russia)
+2026-01-07 15:45:33 [HIGH] Port scan detected from 185.220.101.33 (Netherlands) - all ports
+2026-01-07 15:48:11 [INFO] Firewall rules updated - blocking multiple IPs
+2026-01-07 15:52:29 [CRITICAL] Shell injection attempt from 198.51.100.88 (China) in upload handler
+2026-01-07 15:55:48 [HIGH] Brute force attack on SSH from 203.0.113.42
+2026-01-07 15:58:35 [FAILED] Login attempt from 91.108.56.181 (Germany) - user: test
+2026-01-07 16:02:14 [CRITICAL] Backdoor installation attempt from 45.142.120.10 (Russia)
+2026-01-07 16:05:53 [HIGH] XSS with script injection from 185.220.101.33 (Netherlands)
+2026-01-07 16:08:29 [FAILED] Login attempt from 198.51.100.88 (China) - user: guest
+2026-01-07 16:12:07 [CRITICAL] Remote file inclusion from 203.0.113.42
+2026-01-07 16:15:42 [HIGH] Multiple attack vectors from 91.108.56.181 (Germany)
+2026-01-07 16:18:19 [SUCCESS] Login from 10.0.0.52 (US) - user: agarcia
+2026-01-07 16:22:55 [CRITICAL] DDoS attack in progress from 45.142.120.10 (Russia) - 500 req/sec
+2026-01-07 16:25:31 [HIGH] SQL injection attempt in login form from 185.220.101.33 (Netherlands)
+2026-01-07 16:28:08 [FAILED] Login attempt from 198.51.100.88 (China) - user: www-data
+2026-01-07 16:32:44 [CRITICAL] Exploit code detected in HTTP headers from 203.0.113.42
+2026-01-07 16:35:21 [HIGH] Directory enumeration from 91.108.56.181 (Germany)
+2026-01-07 16:38:58 [CRITICAL] Privilege escalation via sudo exploit from 45.142.120.10 (Russia)
+2026-01-07 16:42:35 [HIGH] Suspicious outbound connections to command & control server

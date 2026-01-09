@@ -1,0 +1,50 @@
+2026-01-07 14:00:12 [CRITICAL] Active intrusion detected from 45.142.120.10 (Russia) - immediate response required
+2026-01-07 14:02:33 [CRITICAL] SQL injection with DROP TABLE command from 185.220.101.33 (Netherlands)
+2026-01-07 14:05:18 [CRITICAL] Malware signature detected in multiple files from 198.51.100.88 (China)
+2026-01-07 14:08:45 [CRITICAL] Multiple SSH brute force attempts from 91.108.56.181 (Germany) - 25 failed attempts in 30s
+2026-01-07 14:12:22 [CRITICAL] Remote code execution successful from 45.142.120.10 (Russia) - root access gained
+2026-01-07 14:15:09 [CRITICAL] Data exfiltration in progress from 203.0.113.42 - 2GB transferred
+2026-01-07 14:18:33 [CRITICAL] Ransomware encryption detected from 185.220.101.33 (Netherlands)
+2026-01-07 14:22:44 [CRITICAL] Backdoor installed via buffer overflow from 198.51.100.88 (China)
+2026-01-07 14:25:11 [HIGH] Port scan detected from 91.108.56.181 (Germany) - scanning all ports
+2026-01-07 14:28:55 [CRITICAL] DDoS attack in progress from 45.142.120.10 (Russia) - 1000 req/sec
+2026-01-07 14:32:18 [CRITICAL] Zero-day exploit actively exploiting system from 203.0.113.42
+2026-01-07 14:35:42 [CRITICAL] Cryptocurrency mining botnet detected from 185.220.101.33 (Netherlands)
+2026-01-07 14:38:29 [CRITICAL] Shell injection in upload handler from 198.51.100.88 (China)
+2026-01-07 14:42:05 [HIGH] Privilege escalation attempt from 91.108.56.181 (Germany)
+2026-01-07 14:45:33 [CRITICAL] Active command & control communication from 45.142.120.10 (Russia)
+2026-01-07 14:48:17 [CRITICAL] Database dumping in progress from 203.0.113.42
+2026-01-07 14:52:41 [CRITICAL] Kernel exploit attempt from 185.220.101.33 (Netherlands)
+2026-01-07 14:55:22 [CRITICAL] Mass brute force attack from botnet - 50 IPs coordinated
+2026-01-07 14:58:09 [HIGH] XSS with credential theft from 198.51.100.88 (China)
+2026-01-07 15:02:33 [CRITICAL] Root privilege obtained via sudo exploit from 91.108.56.181 (Germany)
+2026-01-07 15:05:47 [CRITICAL] Webshell uploaded successfully from 45.142.120.10 (Russia)
+2026-01-07 15:08:15 [CRITICAL] Active data breach - customer records accessed from 203.0.113.42
+2026-01-07 15:12:28 [CRITICAL] Lateral movement detected - multiple systems compromised
+2026-01-07 15:15:55 [HIGH] SQL injection bypassing WAF from 185.220.101.33 (Netherlands)
+2026-01-07 15:18:42 [CRITICAL] Persistent backdoor installed in system files from 198.51.100.88 (China)
+2026-01-07 15:22:11 [CRITICAL] Network traffic redirected to attacker infrastructure
+2026-01-07 15:25:33 [CRITICAL] Multiple exploit chains executed from 91.108.56.181 (Germany)
+2026-01-07 15:28:09 [CRITICAL] Admin account compromised from 45.142.120.10 (Russia)
+2026-01-07 15:32:44 [HIGH] Brute force on VPN gateway from 203.0.113.42
+2026-01-07 15:35:27 [CRITICAL] Advanced persistent threat detected from 185.220.101.33 (Netherlands)
+2026-01-07 15:38:15 [CRITICAL] Memory corruption exploit from 198.51.100.88 (China)
+2026-01-07 15:42:58 [CRITICAL] Credentials dumped from system memory from 91.108.56.181 (Germany)
+2026-01-07 15:45:33 [CRITICAL] Unauthorized system modification from 45.142.120.10 (Russia)
+2026-01-07 15:48:11 [HIGH] Active reconnaissance from multiple IPs
+2026-01-07 15:52:29 [CRITICAL] Fileless malware detected in memory from 203.0.113.42
+2026-01-07 15:55:48 [CRITICAL] Supply chain attack via compromised library from 185.220.101.33 (Netherlands)
+2026-01-07 15:58:35 [CRITICAL] Session hijacking with stolen tokens from 198.51.100.88 (China)
+2026-01-07 16:02:14 [HIGH] XML external entity injection from 91.108.56.181 (Germany)
+2026-01-07 16:05:53 [CRITICAL] Active exploitation of unpatched vulnerability from 45.142.120.10 (Russia)
+2026-01-07 16:08:29 [CRITICAL] Ransomware spreading across network from 203.0.113.42
+2026-01-07 16:12:07 [CRITICAL] Password spray attack compromising multiple accounts
+2026-01-07 16:15:42 [CRITICAL] Domain admin privileges escalated from 185.220.101.33 (Netherlands)
+2026-01-07 16:18:19 [HIGH] Suspicious PowerShell execution from 198.51.100.88 (China)
+2026-01-07 16:22:55 [CRITICAL] Active data destruction attempt from 91.108.56.181 (Germany)
+2026-01-07 16:25:31 [CRITICAL] Botnet command received - coordinated attack imminent
+2026-01-07 16:28:08 [CRITICAL] System integrity compromised from 45.142.120.10 (Russia)
+2026-01-07 16:32:44 [CRITICAL] Encrypted communication to known APT infrastructure
+2026-01-07 16:35:21 [HIGH] Mass exploitation attempt across all services
+2026-01-07 16:38:58 [CRITICAL] Complete system compromise from 203.0.113.42
+2026-01-07 16:42:35 [CRITICAL] Emergency shutdown initiated - active threat containment
