@@ -273,7 +273,7 @@ export const aggregateStats = (logs) => {
   };
 };
 
-// Build attack map data
+// Build attack map data - TODO
 export const buildAttackMap = (logs, geoLocations) => {
   const countryCounts = {};
   

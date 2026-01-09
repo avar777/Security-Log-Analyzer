@@ -1,16 +1,16 @@
 /**
  * Security Log Analyzer Styles
- * Clean, warm aesthetic - no cyberpunk stuff
+ *
  * Author: Ava Raper
- * Updated: Removed Live Log, made alerts scrollable, simplified threat levels
  */
 
 :root {
   --bg-color: #f5f1e8;
   --card-bg: #ffffff;
   --primary: #7a9b7f;
-  --danger: #d98572;
-  --warning: #e8b55d;
+  --danger: #e64747;
+  --warning: #e8a05d;
+  --moderate: #e7cf6e;
   --success: #7a9b7f;
   --text: #2c3e3f;
   --text-light: #6b7f7f;
@@ -109,8 +109,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.25rem;
-  background-color: white;
-  color: var(--primary);
+  background-color: var(--primary);
+  color: white;
   border: 2px solid var(--primary);
   border-radius: 8px;
   font-weight: 500;
@@ -120,8 +120,7 @@
 }
 
 .help-button:hover {
-  background-color: var(--primary);
-  color: white;
+  background-color: #6a8b6f;
   transform: translateY(-1px);
 }
 
@@ -286,9 +285,13 @@
   border: 2px solid var(--primary);
 }
 
-/* Status indicators in tutorial - updated to Low/High/Critical */
+/* Status indicators in tutorial */
 .status-low {
   color: var(--success);
+}
+
+.status-elevated {
+  color: var(--moderate);
 }
 
 .status-high {

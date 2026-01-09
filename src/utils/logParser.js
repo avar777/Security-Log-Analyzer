@@ -26,7 +26,7 @@ export const extractTimestamp = (logLine) => {
   const syslogMatch = logLine.match(/(\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})/);
   if (syslogMatch) return syslogMatch[1];
   
-  // If we can't find anything, just use current time
+  // If there is no time found, just use current time
   return new Date().toISOString();
 };
 
@@ -236,7 +236,7 @@ export const parseLogs = (logLines) => {
     .filter(log => log !== null);
 };
 
-// Sample data for demo
+// Sample data for demo only
 export const sampleLogs = [
   '2026-01-07 14:23:45 [CRITICAL] Multiple SSH brute force attempts from 45.142.120.10 (Russia) - 15 failed attempts in 30s',
   '2026-01-07 14:23:47 [FAILED] Login attempt from 192.168.1.105 - user: admin',

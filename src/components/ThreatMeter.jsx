@@ -1,13 +1,15 @@
 /**
  * Threat Meter Card
- * Shows current threat level as a progress bar with a precentage
+ * Shows current threat level as a progress bar with a percentage
+ * 
+ * Author: Ava Raper
  */
 
 import React from 'react';
 import { TrendingUp } from 'lucide-react';
 
 const ThreatMeter = ({ threatLevel }) => {
-  // Figure out what color the bar will be be
+  // Figure out what color the bar will be
   const getThreatColor = () => {
     if (threatLevel < 30) return '#7a9b7f'; // green - all good
     if (threatLevel < 60) return '#e8b55d'; // yellow - keep an eye out

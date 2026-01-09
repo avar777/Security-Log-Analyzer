@@ -1,6 +1,8 @@
 /**
- * Alert Panel
- * Shows all security alerts in a scrollable container
+ * Alert Card
+ * Shows all security alerts in a scrollable car 
+ * 
+ * Author: Ava Raper
  */
 
 import React from 'react';
@@ -20,7 +22,7 @@ const AlertPanel = ({ alerts }) => {
     }
   };
 
-  // Don't show the panel if there are no alerts
+  // The panel won't show if there are no alerts
   if (!alerts || alerts.length === 0) {
     return null;
   }
@@ -35,7 +37,7 @@ const AlertPanel = ({ alerts }) => {
         </div>
       </div>
       
-      {/* Now scrollable and shows all alerts */}
+      {/* Shows all alerts and is scrollable */}
       <div className="alert-panel-scroll">
         <div className="alert-panel-grid">
           {alerts.map((alert, idx) => (

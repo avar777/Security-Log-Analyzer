@@ -1,6 +1,8 @@
 /**
- * Help Tutorial Component
- * Simplified guide for using the Security Log Analyzer
+ * Help Tutorial Card
+ * Guide for how to use the Security Log Analyzer
+ * 
+ * Author: Ava Raper
  */
 
 import React, { useState } from 'react';
@@ -21,7 +23,7 @@ const HelpTutorial = () => {
         <span>Help</span>
       </button>
 
-      {/* Tutorial modal */}
+      {/* Tutorial pop-up */}
       {isOpen && (
         <div className="tutorial-overlay" onClick={() => setIsOpen(false)}>
           <div className="tutorial-modal" onClick={(e) => e.stopPropagation()}>
@@ -70,7 +72,7 @@ const HelpTutorial = () => {
                 </ul>
               </div>
 
-              {/* What to Watch For */}
+              {/* What to look for */}
               <div className="tutorial-section">
                 <div className="tutorial-section-header">
                   <Shield size={20} />

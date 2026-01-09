@@ -1,9 +1,8 @@
 /**
  * Security Log Analyzer
- * Main component - simplified and focused
+ * The main component 
  * 
- * Removed: Total Events stat, Live Log Stream (redundant with alerts)
- * Updated: Cleaner, more focused interface
+ * Author: Ava Raper
  */
 
 import React, { useState, useEffect } from 'react';
@@ -20,7 +19,7 @@ const SecurityLogAnalyzer = () => {
   const [analysis, setAnalysis] = useState(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-  // Load sample data when component mounts
+  // Load the sample data for demo (delete this later)
   useEffect(() => {
     setIsAnalyzing(true);
     
@@ -86,7 +85,6 @@ const SecurityLogAnalyzer = () => {
         <div className="analyzer-header">
           <div className="header-title">
             <h1>Security Log Analyzer</h1>
-            <p>Monitor and analyze security events</p>
           </div>
           
           <div className="header-actions">
@@ -107,7 +105,7 @@ const SecurityLogAnalyzer = () => {
           </div>
         </div>
 
-        {/* Threat level meter */}
+        {/* Threat level bar */}
         <ThreatMeter threatLevel={analysis.threatLevel} />
 
         {/* Quick stats - removed Total Events */}
@@ -151,15 +149,8 @@ const SecurityLogAnalyzer = () => {
           </div>
         </div>
 
-        {/* Security alerts - now scrollable and shows all */}
+        {/* Security alerts - now scrollable */}
         <AlertPanel alerts={analysis.alerts} />
-
-        {/* Footer info */}
-        <div className="info-footer">
-          <strong>Demo:</strong> Currently showing sample security logs. Upload your own log files 
-          (SSH, Apache, nginx, system logs) to analyze real data. Supports standard log formats with 
-          timestamps and severity levels. Click the <strong>Help</strong> button above for a quick guide.
-        </div>
       </div>
     </div>
   );
