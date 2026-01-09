@@ -37,8 +37,8 @@ const HelpTutorial = () => {
             <div className="tutorial-content">
               <h2>Help Guide</h2>
               <p className="tutorial-intro">
-                This website allows users to upload a txt or log file. Once uploaded, it will analyze
-                the security logs and identify threats like hacking attempts, 
+                This website allows the user to upload a txt or log file. Once the files are uploaded it will analyze
+                the security logs and identifies threats like hacking attempts, 
                 brute force attacks, and suspicious activity.
               </p>
 
@@ -63,6 +63,13 @@ const HelpTutorial = () => {
                   </li>
                 </ul>
 
+                <p><strong>Attack Map:</strong></p>
+                <ul>
+                  <li>This is a cyber attack map showing where threats are coming from geographically. 
+                    The larger and more intense the red dots, the more attacks originating from that location.
+                  </li>
+                </ul>
+
                 <p><strong>Security Alerts:</strong></p>
                 <ul>
                   <li><span className="severity-success">NORMAL</span> - Normal, authorized activity</li>
@@ -83,7 +90,7 @@ const HelpTutorial = () => {
                   <li>Threat level above 60%</li>
                   <li>Multiple failed logins from the same IP address</li>
                   <li>Critical or High severity alerts</li>
-                  <li>Many requests from unfamiliar countries</li>
+                  <li>Lots of requests from unfamiliar countries</li>
                 </ul>
 
                 <p><strong>Common Attack Types:</strong></p>

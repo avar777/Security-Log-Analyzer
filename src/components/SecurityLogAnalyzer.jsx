@@ -9,6 +9,7 @@ import React, { useState, useEffect } from 'react';
 import { Shield, Upload, Lock, Eye, AlertTriangle } from 'lucide-react';
 import ThreatMeter from './ThreatMeter';
 import AlertPanel from './AlertPanel';
+import AttackMap from './AttackMap';
 import Tutorial from './Tutorial';
 import { parseLogs, sampleLogs, geoLocations } from '../utils/logParser';
 import { analyzeLogs } from '../utils/threatAnalysis';
@@ -148,6 +149,9 @@ const SecurityLogAnalyzer = () => {
             <div className="stat-label">Active Threats</div>
           </div>
         </div>
+
+        {/* Attack origins map */}
+        <AttackMap attackData={analysis.attackMap} />
 
         {/* Security alerts - now scrollable */}
         <AlertPanel alerts={analysis.alerts} />
