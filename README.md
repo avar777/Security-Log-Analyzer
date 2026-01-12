@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+# Security Log Analyzer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web-based tool for analyzing security logs and identifying potential threats. Built to practice security log analysis and incident response workflows.
 
-## Available Scripts
+[Live Website](https://avar777.github.io/Security-Log-Analyzer/)
 
-In the project directory, you can run:
+![Screenshot](./public/dashboard-preview.png)
 
-### `npm start`
+## Background
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+During security incident response, analysts need to quickly assess log files from compromised systems to understand what happened. This tool simulates that workflow by parsing various log formats and identifying common attack patterns that would indicate a security incident.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Threat Detection Capabilities
 
-### `npm test`
+This analyzer identifies the following attack types commonly seen in the real-world:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**SQL Injection** - Detects attempts to manipulate database queries through user input. Looks for SQL keywords like UNION SELECT, DROP TABLE, and malformed queries in access logs.
 
-### `npm run build`
+**Brute Force Attacks** - Identifies multiple failed authentication attempts from the same IP address within a short time window. Threshold set at 3+ failures to reduce false positives from legitimate typos.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Cross-Site Scripting (XSS)** - Flags attempts to inject malicious scripts through parameters. Searches for <script> tags and JavaScript event handlers in request paths.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Port Scanning** - Detects reconnaissance activity where attackers probe for open services. Identifies patterns of sequential port access from single sources.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Directory Traversal** - Catches attempts to access files outside web root using "../" sequences. This is often a precursor to more serious exploitation.
 
-### `npm run eject`
+**DDoS Indicators** - Identifies abnormally high request volumes from single IPs that could indicate denial of service attacks or botnet activity.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Command Injection** - Detects attempts to execute system commands through vulnerable input fields, often seen in RCE (Remote Code Execution) attacks.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Why These Patterns Matter
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Understanding these attack signatures is essential for security analysts because:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **SQL Injection** remains in OWASP Top 10 and caused major breaches at Target, Heartland Payment Systems
+- **Brute Force** is how attackers gain initial access in credential-stuffing campaigns
+- **Port Scanning** appears in the reconnaissance phase of the cyber kill chain
+- **XSS** enables session hijacking and is commonly used in phishing campaigns
 
-## Learn More
+The tool prioritizes these patterns because they represent the most common attack vectors analysts encounter during incident response.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Threat Scoring Methodology
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The analyzer calculates an overall threat level (0-100%) based on:
 
-### Code Splitting
+- **Severity weighting**: CRITICAL events contribute more to the score than LOW events
+- **Frequency analysis**: Multiple attack attempts from same source increase score
+- **Pattern diversity**: Different attack types from same IP suggest coordinated campaign
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Scoring formula: `(critical × 10 + high × 5 + medium × 2) / (total events × 10) × 100`
 
-### Analyzing the Bundle Size
+This provides at-a-glance assessment similar to risk scoring in SIEM platforms.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Use Cases for Security Analysts
 
-### Making a Progressive Web App
+**Incident Response**: Quickly triage log files from compromised servers to identify attack vectors and timeline
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Security Audits**: Review web server logs to find potential vulnerabilities being probed by attackers
 
-### Advanced Configuration
+**Threat Hunting**: Identify suspicious patterns that automated tools might miss
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Training**: Practice log analysis skills with sample datasets representing different threat scenarios
 
-### Deployment
+## Geographic Threat Intelligence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The world map visualization shows attack origin locations, helping analysts:
+- Identify geographic patterns (are attacks coming from known threat actor regions?)
+- Spot distributed attacks (attacks from multiple countries suggest botnet)
+- Correlate with threat intelligence (is this IP range known for APT activity?)
 
-### `npm run build` fails to minify
+This mirrors functionality in commercial SIEM platforms like Splunk or QRadar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Supported Log Formats
+
+**Web Server Logs** (Apache/nginx):
+```
+45.142.120.10 - - [07/Jan/2026:14:23:45] "GET /admin' OR '1'='1 HTTP/1.1" 403
+```
+
+**SSH Authentication Logs**:
+```
+Jan 07 14:23:45 server sshd[1234]: Failed password for admin from 45.142.120.10
+```
+
+**Generic Security Logs**:
+```
+2026-01-07 14:23:45 [CRITICAL] SQL injection attempt from 45.142.120.10 (Russia)
+```
+
+The parser automatically detects format, similar to how SIEM tools normalize logs from different sources.
+
+## Sample Datasets
+
+The `/sample-logs` folder contains realistic scenarios:
+
+- **logs-normal.txt** - Baseline legitimate traffic
+- **logs-low-threat.txt** - Minor security events (failed logins from internal IPs)
+- **logs-elevated-threat.txt** - Suspicious but not critical activity
+- **logs-high-threat.txt** - Active exploitation attempts
+- **logs-critical-threat.txt** - Confirmed breach indicators (malware, data exfiltration)
+
+These represent the types of logs you'd analyze during different phases of an incident.
+
+## Limitations and Real-World Considerations
+
+**No Context Awareness**: The tool can't distinguish between legitimate admin activity and attacker commands. Real SOC analysts would correlate with user behavior baselines.
+
+**False Positives**: Legitimate queries might contain SQL keywords. Production SIEM tools use machine learning to reduce false positive rates.
+
+**Static Analysis Only**: Real-time monitoring and alerting would require backend infrastructure. This is designed for post-incident forensics.
+
+**Limited Threat Intelligence**: Uses hardcoded geographic data. Enterprise tools integrate with feeds like AlienVault OTX or MISP for real-time threat correlation.
+
+## What I Learned Building This
+
+- How different attack patterns appear in logs (what SQL injection actually looks like vs theoretical knowledge)
+- Why log normalization matters when dealing with multiple formats
+- The balance between detection sensitivity and false positive rates
+- How security analysts need both technical skills and investigative thinking
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/security-log-analyzer.git
+cd security-log-analyzer
+npm install
+npm start
+```
+
+## Future Enhancements
+
+- **Correlation Rules**: Link related events (failed login followed by privilege escalation from same IP)
+- **Timeline Visualization**: Show attack progression over time
+- **IOC Extraction**: Automatically pull indicators of compromise (IPs, file hashes) for sharing
+- **MITRE ATT&CK Mapping**: Tag detected techniques to the ATT&CK framework
+- **Export Reports**: Generate incident reports in standard formats for documentation
+
+## Technologies Used
+
+React, JavaScript, CSS - chosen for client-side processing to maintain log privacy (no data sent to servers)
+
+## Author
+
+Ava Raper
+
+## License
+
+MIT
