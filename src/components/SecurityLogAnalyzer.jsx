@@ -16,7 +16,6 @@ import { analyzeLogs } from '../utils/threatAnalysis';
 import '../styles/Dashboard.css';
 
 const SecurityLogAnalyzer = () => {
-  const [logs, setLogs] = useState([]);
   const [analysis, setAnalysis] = useState(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
@@ -27,8 +26,6 @@ const SecurityLogAnalyzer = () => {
     // Give it a second to feel like it's actually analyzing
     setTimeout(() => {
       const parsed = parseLogs(sampleLogs);
-      setLogs(parsed);
-      
       const results = analyzeLogs(parsed, geoLocations);
       setAnalysis(results);
       
@@ -51,8 +48,6 @@ const SecurityLogAnalyzer = () => {
       // Parse the uploaded logs
       setTimeout(() => {
         const parsed = parseLogs(lines);
-        setLogs(parsed);
-        
         const results = analyzeLogs(parsed, geoLocations);
         setAnalysis(results);
         
@@ -94,7 +89,6 @@ const SecurityLogAnalyzer = () => {
             <label className="upload-button">
               <div className="upload-button-content">
                 <Upload size={18} />
-                <span>Upload Logs</span>
               </div>
               <input 
                 type="file" 

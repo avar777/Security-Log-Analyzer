@@ -6,7 +6,7 @@
  */
 
 import React, { useState } from 'react';
-import { HelpCircle, X, Shield, TrendingUp, Upload } from 'lucide-react';
+import { HelpCircle, X} from 'lucide-react';
 
 const HelpTutorial = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,6 @@ const HelpTutorial = () => {
         title="Learn how to use this tool"
       >
         <HelpCircle size={20} />
-        <span>Help</span>
       </button>
 
       {/* Tutorial pop-up */}

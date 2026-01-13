@@ -17,13 +17,6 @@ const ThreatMeter = ({ threatLevel }) => {
     return '#d98572'; // red - bad
   };
 
-  const getThreatLabel = () => {
-    if (threatLevel < 40) return 'Low';
-    if (threatLevel < 60) return 'Elevated';
-    if (threatLevel < 80) return 'High';
-    return 'Critical';
-  };
-
   return (
     <div className="threat-meter-container">
       <div className="threat-meter-header">
